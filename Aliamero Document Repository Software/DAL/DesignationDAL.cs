@@ -14,7 +14,7 @@ namespace Aliamero_Document_Repository_System.DAL
 {
     class DesignationDAL
     {
-        public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
+        public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString(); //giving problems on my machine!! Sounds funny?? Magic!! Thats reality!!
         SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
         public bool Insert(DesignationBLL dbll)
         {
