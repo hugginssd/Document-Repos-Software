@@ -15,12 +15,12 @@ namespace Aliamero_Document_Repository_System.DAL
     class ClientDocumentDAL
     {
         public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
-        SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
+        //SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
         public bool Insert(ClientDocumentBLL cbll)
         {
             bool IsSuccess = false;
-      
-            string sql = "INSERT INTO [dbo].[ClientDocuments]" +
+            SqlConnection con = new SqlConnection(connection);
+                  string sql = "INSERT INTO [dbo].[ClientDocuments]" +
                                                "([ClientName]" +
                                                ",[DocumentType]" +
                                                ",[DocumentNumber]" +
@@ -73,7 +73,7 @@ namespace Aliamero_Document_Repository_System.DAL
         public DataTable Select()
         {
             DataTable dt = null;
-           // SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(connection);
             string sql = "SELECT [ID]" +
                                   ",[ClientName] AS [CLIENT NAME]" +
                                   ",[DocumentType] AS [DOCUMENT TYPE]" +
@@ -88,6 +88,7 @@ namespace Aliamero_Document_Repository_System.DAL
             {
                 con.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
+                dt = new DataTable();
                 da.Fill(dt);
             }
             catch (Exception ex)

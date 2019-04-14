@@ -16,7 +16,7 @@ namespace Aliamero_Document_Repository_System.BLL
         public string Gender { get; set; }
         public string Designation { get; set; }
         public string Department { get; set; }
-        public byte Picture { get; set; }
+        public byte[] Picture { get; set; }
         public string Cellnumber { get; set; }
         public string Email { get; set; }
 

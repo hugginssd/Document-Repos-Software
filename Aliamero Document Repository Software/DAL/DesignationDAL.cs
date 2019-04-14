@@ -53,7 +53,7 @@ namespace Aliamero_Document_Repository_System.DAL
             }
             return IsSuccess;
         }
-        public DataTable Select(DesignationBLL dbll)
+        public DataTable Select()
         {
             DataTable dt = null;
             //SqlConnection con = new SqlConnection(connection);

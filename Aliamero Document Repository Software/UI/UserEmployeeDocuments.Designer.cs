@@ -32,7 +32,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblDocumentTypecategory = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDepartment = new System.Windows.Forms.Label();
@@ -47,20 +47,20 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtSelectdocument = new Windows.Forms.HintTextBox(this.components);
-            this.txtUpdatedDocumentPath = new Windows.Forms.HintTextBox(this.components);
+            this.BtnReset = new System.Windows.Forms.Button();
+            this.BtnUpload = new System.Windows.Forms.Button();
+            this.RdbNo = new System.Windows.Forms.RadioButton();
+            this.RdbExpiry = new System.Windows.Forms.RadioButton();
+            this.RdbDuplicate = new System.Windows.Forms.RadioButton();
+            this.RdbOriginal = new System.Windows.Forms.RadioButton();
+            this.lblSubmittDate = new System.Windows.Forms.Label();
+            this.TxtSelectdocument = new Windows.Forms.HintTextBox(this.components);
+            this.TxtUpdatedDocumentPath = new Windows.Forms.HintTextBox(this.components);
             this.txtDocumentName = new Windows.Forms.HintTextBox(this.components);
             this.txtDocumentNumber = new Windows.Forms.HintTextBox(this.components);
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DtpSubmittDate = new System.Windows.Forms.DateTimePicker();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,7 +74,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(216, 23);
             this.label8.TabIndex = 29;
-            this.label8.Text = "Document Type Category";
+            this.label8.Text = "Select Department";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label7
@@ -84,7 +84,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(216, 23);
             this.label7.TabIndex = 28;
-            this.label7.Text = "Document Type Category";
+            this.label7.Text = "Select Employee";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
@@ -94,17 +94,17 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(216, 23);
             this.label6.TabIndex = 27;
-            this.label6.Text = "Document Type Category";
+            this.label6.Text = "Document Type";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label5
+            // lblDocumentTypecategory
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 225);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(186, 23);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "Document Type Category";
+            this.lblDocumentTypecategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDocumentTypecategory.Location = new System.Drawing.Point(19, 225);
+            this.lblDocumentTypecategory.Name = "lblDocumentTypecategory";
+            this.lblDocumentTypecategory.Size = new System.Drawing.Size(186, 23);
+            this.lblDocumentTypecategory.TabIndex = 26;
+            this.lblDocumentTypecategory.Text = "Document Type Category";
             // 
             // label1
             // 
@@ -243,139 +243,141 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.radioButton4);
-            this.panel2.Controls.Add(this.radioButton3);
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.txtSelectdocument);
-            this.panel2.Controls.Add(this.txtUpdatedDocumentPath);
+            this.panel2.Controls.Add(this.BtnReset);
+            this.panel2.Controls.Add(this.BtnUpload);
+            this.panel2.Controls.Add(this.RdbNo);
+            this.panel2.Controls.Add(this.RdbExpiry);
+            this.panel2.Controls.Add(this.RdbDuplicate);
+            this.panel2.Controls.Add(this.RdbOriginal);
+            this.panel2.Controls.Add(this.lblSubmittDate);
+            this.panel2.Controls.Add(this.TxtSelectdocument);
+            this.panel2.Controls.Add(this.TxtUpdatedDocumentPath);
             this.panel2.Controls.Add(this.txtDocumentName);
             this.panel2.Controls.Add(this.txtDocumentNumber);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.DtpSubmittDate);
             this.panel2.Controls.Add(this.comboBox4);
             this.panel2.Location = new System.Drawing.Point(387, 42);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(583, 206);
             this.panel2.TabIndex = 30;
             // 
-            // button2
+            // BtnReset
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(290, 168);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 33);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "RESET";
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtnReset.FlatAppearance.BorderSize = 0;
+            this.BtnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReset.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReset.ForeColor = System.Drawing.Color.White;
+            this.BtnReset.Location = new System.Drawing.Point(290, 168);
+            this.BtnReset.Name = "BtnReset";
+            this.BtnReset.Size = new System.Drawing.Size(90, 33);
+            this.BtnReset.TabIndex = 41;
+            this.BtnReset.Text = "RESET";
+            this.BtnReset.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // BtnUpload
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(28, 165);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 33);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "UPLOAD";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtnUpload.FlatAppearance.BorderSize = 0;
+            this.BtnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUpload.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUpload.ForeColor = System.Drawing.Color.White;
+            this.BtnUpload.Location = new System.Drawing.Point(28, 165);
+            this.BtnUpload.Name = "BtnUpload";
+            this.BtnUpload.Size = new System.Drawing.Size(90, 33);
+            this.BtnUpload.TabIndex = 40;
+            this.BtnUpload.Text = "UPLOAD";
+            this.BtnUpload.UseVisualStyleBackColor = false;
             // 
-            // radioButton4
+            // RdbNo
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(426, 126);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(42, 19);
-            this.radioButton4.TabIndex = 39;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "No";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.RdbNo.AutoSize = true;
+            this.RdbNo.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RdbNo.Location = new System.Drawing.Point(426, 126);
+            this.RdbNo.Name = "RdbNo";
+            this.RdbNo.Size = new System.Drawing.Size(42, 19);
+            this.RdbNo.TabIndex = 39;
+            this.RdbNo.TabStop = true;
+            this.RdbNo.Text = "No";
+            this.RdbNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // RdbExpiry
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(290, 126);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(59, 19);
-            this.radioButton3.TabIndex = 38;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Expiry";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.RdbExpiry.AutoSize = true;
+            this.RdbExpiry.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RdbExpiry.Location = new System.Drawing.Point(290, 126);
+            this.RdbExpiry.Name = "RdbExpiry";
+            this.RdbExpiry.Size = new System.Drawing.Size(59, 19);
+            this.RdbExpiry.TabIndex = 38;
+            this.RdbExpiry.TabStop = true;
+            this.RdbExpiry.Text = "Expiry";
+            this.RdbExpiry.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // RdbDuplicate
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(426, 100);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(76, 19);
-            this.radioButton2.TabIndex = 37;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Duplicate";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RdbDuplicate.AutoSize = true;
+            this.RdbDuplicate.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RdbDuplicate.Location = new System.Drawing.Point(426, 100);
+            this.RdbDuplicate.Name = "RdbDuplicate";
+            this.RdbDuplicate.Size = new System.Drawing.Size(76, 19);
+            this.RdbDuplicate.TabIndex = 37;
+            this.RdbDuplicate.TabStop = true;
+            this.RdbDuplicate.Text = "Duplicate";
+            this.RdbDuplicate.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // RdbOriginal
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(290, 98);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(67, 19);
-            this.radioButton1.TabIndex = 36;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Original";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RdbOriginal.AutoSize = true;
+            this.RdbOriginal.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RdbOriginal.Location = new System.Drawing.Point(290, 98);
+            this.RdbOriginal.Name = "RdbOriginal";
+            this.RdbOriginal.Size = new System.Drawing.Size(67, 19);
+            this.RdbOriginal.TabIndex = 36;
+            this.RdbOriginal.TabStop = true;
+            this.RdbOriginal.Text = "Original";
+            this.RdbOriginal.UseVisualStyleBackColor = true;
             // 
-            // label11
+            // lblSubmittDate
             // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(287, 65);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(216, 23);
-            this.label11.TabIndex = 35;
-            this.label11.Text = "Document Type Category";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSubmittDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubmittDate.Location = new System.Drawing.Point(287, 65);
+            this.lblSubmittDate.Name = "lblSubmittDate";
+            this.lblSubmittDate.Size = new System.Drawing.Size(216, 23);
+            this.lblSubmittDate.TabIndex = 35;
+            this.lblSubmittDate.Text = "Document Type Category";
+            this.lblSubmittDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtSelectdocument
+            // TxtSelectdocument
             // 
-            this.txtSelectdocument.EnterToTab = false;
-            this.txtSelectdocument.Font = new System.Drawing.Font("Humanst521 BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSelectdocument.ForeColor = System.Drawing.Color.Gray;
-            this.txtSelectdocument.HintColor = System.Drawing.Color.Gray;
-            this.txtSelectdocument.HintValue = "Select document";
-            this.txtSelectdocument.Location = new System.Drawing.Point(290, 28);
-            this.txtSelectdocument.Name = "txtSelectdocument";
-            this.txtSelectdocument.Size = new System.Drawing.Size(237, 22);
-            this.txtSelectdocument.TabIndex = 34;
-            this.txtSelectdocument.TextForeColor = System.Drawing.Color.Black;
-            this.txtSelectdocument.Value = "";
+            this.TxtSelectdocument.EnterToTab = false;
+            this.TxtSelectdocument.Font = new System.Drawing.Font("Humanst521 BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtSelectdocument.ForeColor = System.Drawing.Color.Gray;
+            this.TxtSelectdocument.HintColor = System.Drawing.Color.Gray;
+            this.TxtSelectdocument.HintValue = "Select document";
+            this.TxtSelectdocument.Location = new System.Drawing.Point(290, 28);
+            this.TxtSelectdocument.Name = "TxtSelectdocument";
+            this.TxtSelectdocument.Size = new System.Drawing.Size(237, 22);
+            this.TxtSelectdocument.TabIndex = 34;
+            this.TxtSelectdocument.Text = "Select document";
+            this.TxtSelectdocument.TextForeColor = System.Drawing.Color.Black;
+            this.TxtSelectdocument.Value = "";
             // 
-            // txtUpdatedDocumentPath
+            // TxtUpdatedDocumentPath
             // 
-            this.txtUpdatedDocumentPath.EnterToTab = false;
-            this.txtUpdatedDocumentPath.Font = new System.Drawing.Font("Humanst521 BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUpdatedDocumentPath.ForeColor = System.Drawing.Color.Gray;
-            this.txtUpdatedDocumentPath.HintColor = System.Drawing.Color.Gray;
-            this.txtUpdatedDocumentPath.HintValue = "Upload document path";
-            this.txtUpdatedDocumentPath.Location = new System.Drawing.Point(28, 133);
-            this.txtUpdatedDocumentPath.Name = "txtUpdatedDocumentPath";
-            this.txtUpdatedDocumentPath.Size = new System.Drawing.Size(237, 22);
-            this.txtUpdatedDocumentPath.TabIndex = 33;
-            this.txtUpdatedDocumentPath.TextForeColor = System.Drawing.Color.Black;
-            this.txtUpdatedDocumentPath.Value = "";
+            this.TxtUpdatedDocumentPath.EnterToTab = false;
+            this.TxtUpdatedDocumentPath.Font = new System.Drawing.Font("Humanst521 BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUpdatedDocumentPath.ForeColor = System.Drawing.Color.Gray;
+            this.TxtUpdatedDocumentPath.HintColor = System.Drawing.Color.Gray;
+            this.TxtUpdatedDocumentPath.HintValue = "Upload document path";
+            this.TxtUpdatedDocumentPath.Location = new System.Drawing.Point(28, 133);
+            this.TxtUpdatedDocumentPath.Name = "TxtUpdatedDocumentPath";
+            this.TxtUpdatedDocumentPath.Size = new System.Drawing.Size(237, 22);
+            this.TxtUpdatedDocumentPath.TabIndex = 33;
+            this.TxtUpdatedDocumentPath.Text = "Upload document path";
+            this.TxtUpdatedDocumentPath.TextForeColor = System.Drawing.Color.Black;
+            this.TxtUpdatedDocumentPath.Value = "";
             // 
             // txtDocumentName
             // 
@@ -388,6 +390,7 @@
             this.txtDocumentName.Name = "txtDocumentName";
             this.txtDocumentName.Size = new System.Drawing.Size(237, 22);
             this.txtDocumentName.TabIndex = 32;
+            this.txtDocumentName.Text = "Document name";
             this.txtDocumentName.TextForeColor = System.Drawing.Color.Black;
             this.txtDocumentName.Value = "";
             // 
@@ -402,6 +405,7 @@
             this.txtDocumentNumber.Name = "txtDocumentNumber";
             this.txtDocumentNumber.Size = new System.Drawing.Size(237, 22);
             this.txtDocumentNumber.TabIndex = 21;
+            this.txtDocumentNumber.Text = "Document number";
             this.txtDocumentNumber.TextForeColor = System.Drawing.Color.Black;
             this.txtDocumentNumber.Value = "";
             // 
@@ -425,13 +429,13 @@
             this.label9.Text = "Document Type Category";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dateTimePicker1
+            // DtpSubmittDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Humanst521 BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(290, 66);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(241, 22);
-            this.dateTimePicker1.TabIndex = 23;
+            this.DtpSubmittDate.Font = new System.Drawing.Font("Humanst521 BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpSubmittDate.Location = new System.Drawing.Point(290, 66);
+            this.DtpSubmittDate.Name = "DtpSubmittDate";
+            this.DtpSubmittDate.Size = new System.Drawing.Size(241, 22);
+            this.DtpSubmittDate.TabIndex = 23;
             // 
             // comboBox4
             // 
@@ -449,7 +453,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblDocumentTypecategory);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBox3);
@@ -472,7 +476,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblDocumentTypecategory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDepartment;
@@ -487,20 +491,20 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label11;
-        private Windows.Forms.HintTextBox txtSelectdocument;
-        private Windows.Forms.HintTextBox txtUpdatedDocumentPath;
+        private System.Windows.Forms.Button BtnReset;
+        private System.Windows.Forms.Button BtnUpload;
+        private System.Windows.Forms.RadioButton RdbNo;
+        private System.Windows.Forms.RadioButton RdbExpiry;
+        private System.Windows.Forms.RadioButton RdbDuplicate;
+        private System.Windows.Forms.RadioButton RdbOriginal;
+        private System.Windows.Forms.Label lblSubmittDate;
+        private Windows.Forms.HintTextBox TxtSelectdocument;
+        private Windows.Forms.HintTextBox TxtUpdatedDocumentPath;
         private Windows.Forms.HintTextBox txtDocumentName;
         private Windows.Forms.HintTextBox txtDocumentNumber;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DtpSubmittDate;
         private System.Windows.Forms.ComboBox comboBox4;
     }
 }

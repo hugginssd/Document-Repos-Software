@@ -14,12 +14,12 @@ namespace Aliamero_Document_Repository_Software.DAL
 {
     class EmployeeDAL
     {
-       // public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
-        SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
+        public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
+        //SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
         public bool Insert(UserEmployeeBLL uel)
         {
             bool IsSuccess = false;
-           // SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(connection);
             string sql = "INSERT INTO [dbo].[Employee]" +
                                        "([EmployeeID]" +
                                        ",[Firstname]" +
@@ -77,17 +77,70 @@ namespace Aliamero_Document_Repository_Software.DAL
         public DataTable Select()
         {
             DataTable dt = null;
-            //string sql = "";
+            SqlConnection con = new SqlConnection(connection);
+            string sql = "SELECT [ID]" +
+                ",[EmployeeID] AS [EMPLOYEEID]" +
+                ",[Firstname] AS [FIRSTNAME]" +
+                ",[Lastname] AS [LASTNAME]" +
+                ",[Designation] AS [DESIGNATION]" +
+                ",[Department] AS [DEPARTMENT]" +
+                ",[Gender] AS [GENDER]" +
+                ",[Cellnumber] AS [CELLNUMBER]" +
+                ",[EmailID] AS [EMAIL ID]" +
+            "FROM[dbo].[Employee]";
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                da.Fill(dt);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "Data Access Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
+            }
+            finally
+            {
+                con.Close();
+            }
 
             return dt;
         }
         public DataTable Search(string keywords)
         {
             DataTable dt = null;
+            SqlConnection con = new SqlConnection(connection);
+            string sql = "SELECT [ID]" +
+                ",[EmployeeID] AS [EMPLOYEEID]" +
+                ",[Firstname] AS [FIRSTNAME]" +
+                ",[Lastname] AS [LASTNAME]" +
+                ",[Designation] AS [DESIGNATION]" +
+               ",[Department] AS [DEPARTMENT]" +
+                ",[Gender] AS [GENDER]" +
+               ",[Cellnumber] AS [CELLNUMBER]" +
+                ",[EmailID] AS [EMAILID]" +
+            "FROM[dbo].[Employee]"+
+            "WHERE [EmployeeID] LIKE '%"+keywords+"%' OR [Firstname] LIKE '%"+ keywords + "%' OR [Lastname] LIKE '%" + keywords + "%'";
 
-
-
-
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(),"Data Access Error",MessageBoxButtons.OKCancel,MessageBoxIcon.Error,MessageBoxDefaultButton.Button1);
+               
+            }
+            finally
+            {
+                con.Close();
+            }
+            
             return dt;
         }
     }

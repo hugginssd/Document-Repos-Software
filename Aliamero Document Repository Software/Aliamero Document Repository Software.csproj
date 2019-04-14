@@ -64,7 +64,7 @@
     <Compile Include="DAL\ClientDocumentDAL.cs" />
     <Compile Include="DAL\DepartmentDAL.cs" />
     <Compile Include="DAL\DesignationDAL.cs" />
-    <Compile Include="DAL\DocumentTypes.cs" />
+    <Compile Include="DAL\DocumentTypesDAL.cs" />
     <Compile Include="DAL\EmployeeDAL.cs" />
     <Compile Include="DAL\EmployeeDocumentDAL.cs" />
     <Compile Include="DAL\Functions.cs" />

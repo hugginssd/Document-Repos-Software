@@ -32,11 +32,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colDocumentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDocumentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDocumentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colVersionNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colExpiryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSelectAttachment = new Windows.Forms.HintTextBox(this.components);
             this.txtUploadedPath = new Windows.Forms.HintTextBox(this.components);
@@ -85,45 +80,10 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colDocumentName,
-            this.colDocumentID,
-            this.colDocumentDate,
-            this.colVersionNumber,
-            this.colExpiryDate});
             this.dataGridView1.Location = new System.Drawing.Point(2, 50);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(708, 428);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // colDocumentName
-            // 
-            this.colDocumentName.HeaderText = "DOCUMENT NAME";
-            this.colDocumentName.Name = "colDocumentName";
-            this.colDocumentName.Width = 150;
-            // 
-            // colDocumentID
-            // 
-            this.colDocumentID.HeaderText = "DOCUMENT ID";
-            this.colDocumentID.Name = "colDocumentID";
-            this.colDocumentID.Width = 120;
-            // 
-            // colDocumentDate
-            // 
-            this.colDocumentDate.HeaderText = "DOCUMENT DATE";
-            this.colDocumentDate.Name = "colDocumentDate";
-            this.colDocumentDate.Width = 150;
-            // 
-            // colVersionNumber
-            // 
-            this.colVersionNumber.HeaderText = "VERSION NUMBER";
-            this.colVersionNumber.Name = "colVersionNumber";
-            this.colVersionNumber.Width = 140;
-            // 
-            // colExpiryDate
-            // 
-            this.colExpiryDate.HeaderText = "EXPIRY DATE";
-            this.colExpiryDate.Name = "colExpiryDate";
             // 
             // panel1
             // 
@@ -310,6 +270,10 @@
             // CmbSelectDocumentType
             // 
             this.CmbSelectDocumentType.FormattingEnabled = true;
+            this.CmbSelectDocumentType.Items.AddRange(new object[] {
+            "PROOF ID\'s",
+            "QUOTATION",
+            "INVOICE"});
             this.CmbSelectDocumentType.Location = new System.Drawing.Point(11, 94);
             this.CmbSelectDocumentType.Name = "CmbSelectDocumentType";
             this.CmbSelectDocumentType.Size = new System.Drawing.Size(236, 21);
@@ -346,11 +310,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDocumentName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDocumentID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDocumentDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colVersionNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colExpiryDate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnReset;
         private System.Windows.Forms.Button BtnCreate;

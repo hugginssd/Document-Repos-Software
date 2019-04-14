@@ -10,6 +10,6 @@ namespace Aliamero_Document_Repository_System.BLL
     {
         public int ID { get; set; }
         public string DocumentType { get; set; }
-        public bool SubmittedByEmployee { get; set; }
+        public int SubmittedByEmployee { get; set; }
     }
-}
+}   

@@ -37,8 +37,8 @@
             this.txtEmailID = new Windows.Forms.HintTextBox(this.components);
             this.txtCellnumber = new Windows.Forms.HintTextBox(this.components);
             this.txtSearch = new Windows.Forms.HintTextBox(this.components);
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.RdbFemale = new System.Windows.Forms.RadioButton();
+            this.RdbMale = new System.Windows.Forms.RadioButton();
             this.txtLastname = new Windows.Forms.HintTextBox(this.components);
             this.txtFirstname = new Windows.Forms.HintTextBox(this.components);
             this.txtEmployeeID = new Windows.Forms.HintTextBox(this.components);
@@ -159,31 +159,31 @@
             this.txtSearch.TextForeColor = System.Drawing.Color.Black;
             this.txtSearch.Value = "";
             // 
-            // radioButton2
+            // RdbFemale
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.Gray;
-            this.radioButton2.Location = new System.Drawing.Point(188, 284);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(63, 19);
-            this.radioButton2.TabIndex = 48;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RdbFemale.AutoSize = true;
+            this.RdbFemale.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RdbFemale.ForeColor = System.Drawing.Color.Gray;
+            this.RdbFemale.Location = new System.Drawing.Point(188, 284);
+            this.RdbFemale.Name = "RdbFemale";
+            this.RdbFemale.Size = new System.Drawing.Size(63, 19);
+            this.RdbFemale.TabIndex = 48;
+            this.RdbFemale.TabStop = true;
+            this.RdbFemale.Text = "Female";
+            this.RdbFemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // RdbMale
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.Gray;
-            this.radioButton1.Location = new System.Drawing.Point(17, 284);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(51, 19);
-            this.radioButton1.TabIndex = 47;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RdbMale.AutoSize = true;
+            this.RdbMale.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RdbMale.ForeColor = System.Drawing.Color.Gray;
+            this.RdbMale.Location = new System.Drawing.Point(17, 284);
+            this.RdbMale.Name = "RdbMale";
+            this.RdbMale.Size = new System.Drawing.Size(51, 19);
+            this.RdbMale.TabIndex = 47;
+            this.RdbMale.TabStop = true;
+            this.RdbMale.Text = "Male";
+            this.RdbMale.UseVisualStyleBackColor = true;
             // 
             // txtLastname
             // 
@@ -284,6 +284,7 @@
             this.label3.TabIndex = 56;
             this.label3.Text = "Browse";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // ProfilePhoto
             // 
@@ -323,8 +324,8 @@
             this.Controls.Add(this.txtEmailID);
             this.Controls.Add(this.txtCellnumber);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.RdbFemale);
+            this.Controls.Add(this.RdbMale);
             this.Controls.Add(this.txtLastname);
             this.Controls.Add(this.txtFirstname);
             this.Controls.Add(this.txtEmployeeID);
@@ -335,6 +336,7 @@
             this.Controls.Add(this.cmbDesignation);
             this.Name = "UserNewEmployee";
             this.Size = new System.Drawing.Size(995, 453);
+            this.Load += new System.EventHandler(this.UserNewEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePhoto)).EndInit();
             this.ResumeLayout(false);
@@ -352,8 +354,8 @@
         private Windows.Forms.HintTextBox txtEmailID;
         private Windows.Forms.HintTextBox txtCellnumber;
         private Windows.Forms.HintTextBox txtSearch;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton RdbFemale;
+        private System.Windows.Forms.RadioButton RdbMale;
         private Windows.Forms.HintTextBox txtLastname;
         private Windows.Forms.HintTextBox txtFirstname;
         private Windows.Forms.HintTextBox txtEmployeeID;

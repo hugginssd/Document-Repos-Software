@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnReset = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.hintTextBox2 = new Windows.Forms.HintTextBox(this.components);
-            this.hintTextBox1 = new Windows.Forms.HintTextBox(this.components);
+            this.RdbSubmitt = new System.Windows.Forms.RadioButton();
+            this.RdbIssue = new System.Windows.Forms.RadioButton();
+            this.TxtDocumentType = new Windows.Forms.HintTextBox(this.components);
+            this.TxtDocumentID = new Windows.Forms.HintTextBox(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,18 +42,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // BtnReset
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(203, 258);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 30);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "RESET";
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReset.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnReset.Location = new System.Drawing.Point(203, 258);
+            this.BtnReset.Name = "BtnReset";
+            this.BtnReset.Size = new System.Drawing.Size(105, 30);
+            this.BtnReset.TabIndex = 21;
+            this.BtnReset.Text = "RESET";
+            this.BtnReset.UseVisualStyleBackColor = false;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // button1
             // 
@@ -67,58 +68,62 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "CREATE";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.BtnCreate_Click);
             // 
-            // radioButton2
+            // RdbSubmitt
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(16, 214);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(150, 19);
-            this.radioButton2.TabIndex = 19;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Submitted By Employee";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RdbSubmitt.AutoSize = true;
+            this.RdbSubmitt.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RdbSubmitt.Location = new System.Drawing.Point(16, 214);
+            this.RdbSubmitt.Name = "RdbSubmitt";
+            this.RdbSubmitt.Size = new System.Drawing.Size(150, 19);
+            this.RdbSubmitt.TabIndex = 19;
+            this.RdbSubmitt.TabStop = true;
+            this.RdbSubmitt.Text = "Submitted By Employee";
+            this.RdbSubmitt.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // RdbIssue
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(16, 170);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(130, 19);
-            this.radioButton1.TabIndex = 18;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Issued To Employee";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RdbIssue.AutoSize = true;
+            this.RdbIssue.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RdbIssue.Location = new System.Drawing.Point(16, 170);
+            this.RdbIssue.Name = "RdbIssue";
+            this.RdbIssue.Size = new System.Drawing.Size(130, 19);
+            this.RdbIssue.TabIndex = 18;
+            this.RdbIssue.TabStop = true;
+            this.RdbIssue.Text = "Issued To Employee";
+            this.RdbIssue.UseVisualStyleBackColor = true;
             // 
-            // hintTextBox2
+            // TxtDocumentType
             // 
-            this.hintTextBox2.EnterToTab = false;
-            this.hintTextBox2.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hintTextBox2.ForeColor = System.Drawing.Color.Gray;
-            this.hintTextBox2.HintColor = System.Drawing.Color.Gray;
-            this.hintTextBox2.HintValue = "Document Type";
-            this.hintTextBox2.Location = new System.Drawing.Point(16, 124);
-            this.hintTextBox2.Name = "hintTextBox2";
-            this.hintTextBox2.Size = new System.Drawing.Size(292, 23);
-            this.hintTextBox2.TabIndex = 17;
-            this.hintTextBox2.TextForeColor = System.Drawing.Color.Black;
-            this.hintTextBox2.Value = "";
+            this.TxtDocumentType.EnterToTab = false;
+            this.TxtDocumentType.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDocumentType.ForeColor = System.Drawing.Color.Gray;
+            this.TxtDocumentType.HintColor = System.Drawing.Color.Gray;
+            this.TxtDocumentType.HintValue = "Document Type";
+            this.TxtDocumentType.Location = new System.Drawing.Point(16, 124);
+            this.TxtDocumentType.Name = "TxtDocumentType";
+            this.TxtDocumentType.Size = new System.Drawing.Size(292, 23);
+            this.TxtDocumentType.TabIndex = 17;
+            this.TxtDocumentType.Text = "Document Type";
+            this.TxtDocumentType.TextForeColor = System.Drawing.Color.Black;
+            this.TxtDocumentType.Value = "";
             // 
-            // hintTextBox1
+            // TxtDocumentID
             // 
-            this.hintTextBox1.EnterToTab = false;
-            this.hintTextBox1.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hintTextBox1.ForeColor = System.Drawing.Color.Gray;
-            this.hintTextBox1.HintColor = System.Drawing.Color.Gray;
-            this.hintTextBox1.HintValue = "Document ID";
-            this.hintTextBox1.Location = new System.Drawing.Point(16, 81);
-            this.hintTextBox1.Name = "hintTextBox1";
-            this.hintTextBox1.Size = new System.Drawing.Size(292, 23);
-            this.hintTextBox1.TabIndex = 16;
-            this.hintTextBox1.TextForeColor = System.Drawing.Color.Black;
-            this.hintTextBox1.Value = "";
+            this.TxtDocumentID.Enabled = false;
+            this.TxtDocumentID.EnterToTab = false;
+            this.TxtDocumentID.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDocumentID.ForeColor = System.Drawing.Color.Gray;
+            this.TxtDocumentID.HintColor = System.Drawing.Color.Gray;
+            this.TxtDocumentID.HintValue = "Document ID";
+            this.TxtDocumentID.Location = new System.Drawing.Point(16, 81);
+            this.TxtDocumentID.Name = "TxtDocumentID";
+            this.TxtDocumentID.Size = new System.Drawing.Size(292, 23);
+            this.TxtDocumentID.TabIndex = 16;
+            this.TxtDocumentID.Text = "Document ID";
+            this.TxtDocumentID.TextForeColor = System.Drawing.Color.Black;
+            this.TxtDocumentID.Value = "";
             // 
             // label1
             // 
@@ -159,16 +164,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.hintTextBox2);
-            this.Controls.Add(this.hintTextBox1);
+            this.Controls.Add(this.RdbSubmitt);
+            this.Controls.Add(this.RdbIssue);
+            this.Controls.Add(this.TxtDocumentType);
+            this.Controls.Add(this.TxtDocumentID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "UserDocumentTypes";
             this.Size = new System.Drawing.Size(767, 319);
+            this.Load += new System.EventHandler(this.UserDocumentTypes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -177,12 +183,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnReset;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private Windows.Forms.HintTextBox hintTextBox2;
-        private Windows.Forms.HintTextBox hintTextBox1;
+        private System.Windows.Forms.RadioButton RdbSubmitt;
+        private System.Windows.Forms.RadioButton RdbIssue;
+        private Windows.Forms.HintTextBox TxtDocumentType;
+        private Windows.Forms.HintTextBox TxtDocumentID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;

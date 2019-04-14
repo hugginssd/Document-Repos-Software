@@ -15,11 +15,11 @@ namespace Aliamero_Document_Repository_System.DAL
     class DocumentTypesDAL
     {
         public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
-        SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
+        //SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
         public bool Insert(DocumentTypesBLL dbll)
         {
             bool IsSuccess = false;
-            //SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(connection);
             string sql = "INSERT INTO [dbo].[DocumentTypes]" +
                                                "([DocumentType]" +
                                                ",[SubmittedByEmployee])" +
@@ -57,7 +57,7 @@ namespace Aliamero_Document_Repository_System.DAL
         public DataTable Select()
         {
             DataTable dt = null;
-            //SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(connection);
             string sql = "SELECT [ID]" +
                               ",[DocumentType]" +
                               ",[SubmittedByEmployee]" +
@@ -67,6 +67,7 @@ namespace Aliamero_Document_Repository_System.DAL
             {
                 con.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
+                dt= new DataTable();
                 da.Fill(dt);
             }
             catch (Exception ex)
