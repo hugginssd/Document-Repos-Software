@@ -75,13 +75,13 @@ namespace Aliamero_Document_Repository_System.DAL
             DataTable dt = null;
            // SqlConnection con = new SqlConnection(connection);
             string sql = "SELECT [ID]" +
-                                  ",[ClientName]" +
-                                  ",[DocumentType]" +
-                                  ",[DocumentNumber]" +
-                                  ",[DocumentName]" +
-                                  ",[SubmittedDate]" +
-                                  ",[Discription]" +
-                                  ",[DocumentPath]" +
+                                  ",[ClientName] AS [CLIENT NAME]" +
+                                  ",[DocumentType] AS [DOCUMENT TYPE]" +
+                                  ",[DocumentNumber] AS [DOCUMENT NUMBER]" +
+                                  ",[DocumentName] AS [DOCUMENT NAME]" +
+                                  ",[SubmittedDate] AS [SUBMITTED DATE]" +
+                                  ",[Discription] AS [DESCRIPTION]" +
+                                  ",[DocumentPath] AS [DOCUMENT PATH]" +
                               "FROM[dbo].[ClientDocuments]";
             SqlCommand cmd = new SqlCommand(sql, con);
             try

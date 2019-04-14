@@ -49,9 +49,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblSelectClient = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.DtpSubmittDate = new System.Windows.Forms.DateTimePicker();
+            this.CmbSelectDocumentType = new System.Windows.Forms.ComboBox();
+            this.CmbSelectClient = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -140,9 +140,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblSelectClient);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.DtpSubmittDate);
+            this.panel1.Controls.Add(this.CmbSelectDocumentType);
+            this.panel1.Controls.Add(this.CmbSelectClient);
             this.panel1.ForeColor = System.Drawing.Color.Gray;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
@@ -172,14 +172,14 @@
             this.txtUploadedPath.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUploadedPath.ForeColor = System.Drawing.Color.Gray;
             this.txtUploadedPath.HintColor = System.Drawing.Color.Gray;
-            this.txtUploadedPath.HintValue = "Document number";
+            this.txtUploadedPath.HintValue = "Upload path";
             this.txtUploadedPath.Location = new System.Drawing.Point(9, 352);
             this.txtUploadedPath.Name = "txtUploadedPath";
             this.txtUploadedPath.Size = new System.Drawing.Size(237, 23);
             this.txtUploadedPath.TabIndex = 44;
-            this.txtUploadedPath.Text = "Upload document path";
+            this.txtUploadedPath.Text = "Upload path";
             this.txtUploadedPath.TextForeColor = System.Drawing.Color.Black;
-            this.txtUploadedPath.Value = "Upload document path";
+            this.txtUploadedPath.Value = "";
             // 
             // txtDescription
             // 
@@ -299,29 +299,29 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "Client Documents";
             // 
-            // dateTimePicker1
+            // DtpSubmittDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Humanst521 BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(9, 230);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(241, 22);
-            this.dateTimePicker1.TabIndex = 25;
+            this.DtpSubmittDate.Font = new System.Drawing.Font("Humanst521 BT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpSubmittDate.Location = new System.Drawing.Point(9, 230);
+            this.DtpSubmittDate.Name = "DtpSubmittDate";
+            this.DtpSubmittDate.Size = new System.Drawing.Size(241, 22);
+            this.DtpSubmittDate.TabIndex = 25;
             // 
-            // comboBox2
+            // CmbSelectDocumentType
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(11, 94);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(236, 21);
-            this.comboBox2.TabIndex = 6;
+            this.CmbSelectDocumentType.FormattingEnabled = true;
+            this.CmbSelectDocumentType.Location = new System.Drawing.Point(11, 94);
+            this.CmbSelectDocumentType.Name = "CmbSelectDocumentType";
+            this.CmbSelectDocumentType.Size = new System.Drawing.Size(236, 21);
+            this.CmbSelectDocumentType.TabIndex = 6;
             // 
-            // comboBox1
+            // CmbSelectClient
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(11, 50);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(236, 21);
-            this.comboBox1.TabIndex = 4;
+            this.CmbSelectClient.FormattingEnabled = true;
+            this.CmbSelectClient.Location = new System.Drawing.Point(11, 50);
+            this.CmbSelectClient.Name = "CmbSelectClient";
+            this.CmbSelectClient.Size = new System.Drawing.Size(236, 21);
+            this.CmbSelectClient.TabIndex = 4;
             // 
             // UserClientDocuments
             // 
@@ -331,6 +331,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "UserClientDocuments";
             this.Size = new System.Drawing.Size(1004, 490);
+            this.Load += new System.EventHandler(this.UserClientDocuments_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -357,9 +358,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblSelectClient;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker DtpSubmittDate;
+        private System.Windows.Forms.ComboBox CmbSelectDocumentType;
+        private System.Windows.Forms.ComboBox CmbSelectClient;
         private Windows.Forms.HintTextBox txtDocumentNumber;
         private Windows.Forms.HintTextBox txtDocumentname;
         private Windows.Forms.HintTextBox txtSelectAttachment;
