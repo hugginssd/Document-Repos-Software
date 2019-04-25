@@ -9,17 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using Aliamero_Document_Repository_Software.DAL;
 
 namespace Aliamero_Document_Repository_System.DAL
 {
     class EmployeeDocumentDAL
     {
-        public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
+        //public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
         //SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
+Connection con = new Connection();
         public bool Insert(EmployeeDocumentBLL ebll)
         {
             bool IsSuccess = false;
-            SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "INSERT INTO [dbo].[EmployeeDocuments]" +
                                                    "([EmployeeID]" +
                                                    ",[DocumentType]" +
@@ -75,7 +77,7 @@ namespace Aliamero_Document_Repository_System.DAL
         public DataTable SelectDepartments()
         {
             DataTable dt = null;
-           SqlConnection con = new SqlConnection(connection);
+           SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "SELECT [ID]" +
                           ",[Department]" +
                           ",[Description]" +
@@ -102,7 +104,7 @@ namespace Aliamero_Document_Repository_System.DAL
         public DataTable SelectEmployee(string department)
         {
             DataTable dt = null;
-            SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "SELECT[ID]" +
                                  " ,[EmployeeID]" +
                                   ",[Firstname]" +
@@ -137,7 +139,7 @@ namespace Aliamero_Document_Repository_System.DAL
         public DataTable SelectDocumentTypes()
         {
             DataTable dt = null;
-            SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "SELECT [ID]" +
                           ",[DocumentType]" +
                           ",[Description]" +
@@ -164,7 +166,7 @@ namespace Aliamero_Document_Repository_System.DAL
         public DataTable SelectEmployeeDetails(string id)
         {
             DataTable dt = null;
-            SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "SELECT TOP 1000 [aliamero].[dbo].[Employee].[ID]" +
                                                               ",[EmployeeID]" +
                                                               ",[Firstname]" +

@@ -8,6 +8,7 @@ using Aliamero_Document_Repository_System.BLL;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using Aliamero_Document_Repository_Software.DAL;
 
 namespace Aliamero_Document_Repository_System.DAL
 {
@@ -15,11 +16,12 @@ namespace Aliamero_Document_Repository_System.DAL
     {
 
         //public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
-        SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
+        // SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
+        Connection con = new Connection();
         public Boolean Insert(UserBLL ubll)
         {
             bool IsSuccess = false;
-            //SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "INSERT INTO [dbo].[Users]" +
                                             "([UserId]" +
                                             ",[Firstname]" +
@@ -78,7 +80,7 @@ namespace Aliamero_Document_Repository_System.DAL
         public DataTable Select()
         {
             DataTable dt = new DataTable();
-            //SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "SELECT [Id]" +
                               ",[UserId]" +
                               ",[Firstname]" +
@@ -111,7 +113,7 @@ namespace Aliamero_Document_Repository_System.DAL
         public Boolean Update(UserBLL ubll)
         {
             bool IsSuccess = false;
-           // SqlConnection con = new SqlConnection(connection);
+           SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "UPDATE[dbo].[Users]" +
                                    "SET [Username] = @Username" +
                                       ",[Password] = @Password" +
@@ -149,7 +151,7 @@ namespace Aliamero_Document_Repository_System.DAL
         public Boolean Delete(UserBLL ubll)
         {
             bool IsSuccess = false;
-            //SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "DELETE FROM [dbo].[Users]" +
                                 "WHERE [UserId] = @UserId ";
             SqlCommand cmd = new SqlCommand(sql, con);
@@ -180,7 +182,7 @@ namespace Aliamero_Document_Repository_System.DAL
         public DataTable Search(string keywords)
         {
             DataTable dt = new DataTable();
-            //SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "SELECT [Id]" +
                               ",[UserId]" +
                               ",[Firstname]" +
@@ -217,7 +219,7 @@ namespace Aliamero_Document_Repository_System.DAL
             bool IsSuccess = false;
             DataTable dt = new DataTable();
             SqlDataReader dr = null;
-            //SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "SELECT [Id]" +
                               ",[UserId]" +
                               ",[Firstname]" +

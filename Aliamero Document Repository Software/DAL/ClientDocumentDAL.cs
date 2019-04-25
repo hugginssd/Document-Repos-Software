@@ -9,17 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using Aliamero_Document_Repository_Software.DAL;
 
 namespace Aliamero_Document_Repository_System.DAL
 {
     class ClientDocumentDAL
     {
-        public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
+        //public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
         //SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
+        Connection con = new Connection();
         public bool Insert(ClientDocumentBLL cbll)
         {
             bool IsSuccess = false;
-            SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
                   string sql = "INSERT INTO [dbo].[ClientDocuments]" +
                                                "([ClientName]" +
                                                ",[DocumentType]" +
@@ -73,7 +75,7 @@ namespace Aliamero_Document_Repository_System.DAL
         public DataTable Select()
         {
             DataTable dt = null;
-            SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "SELECT [ID]" +
                                   ",[ClientName] AS [CLIENT NAME]" +
                                   ",[DocumentType] AS [DOCUMENT TYPE]" +

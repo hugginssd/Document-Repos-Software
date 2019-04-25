@@ -93,7 +93,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.249431F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.93449F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.240175F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1031, 478);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1021, 464);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // BtnBulkActions
@@ -105,7 +105,7 @@
             this.BtnBulkActions.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.BtnBulkActions.Location = new System.Drawing.Point(11, 23);
             this.BtnBulkActions.Name = "BtnBulkActions";
-            this.BtnBulkActions.Size = new System.Drawing.Size(150, 29);
+            this.BtnBulkActions.Size = new System.Drawing.Size(149, 27);
             this.BtnBulkActions.TabIndex = 1;
             this.BtnBulkActions.Text = "Bulk Actions";
             this.BtnBulkActions.UseVisualStyleBackColor = false;
@@ -117,9 +117,9 @@
             this.BtnUndeleted.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnUndeleted.Font = new System.Drawing.Font("Humanst521 BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnUndeleted.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.BtnUndeleted.Location = new System.Drawing.Point(179, 23);
+            this.BtnUndeleted.Location = new System.Drawing.Point(178, 23);
             this.BtnUndeleted.Name = "BtnUndeleted";
-            this.BtnUndeleted.Size = new System.Drawing.Size(122, 29);
+            this.BtnUndeleted.Size = new System.Drawing.Size(121, 27);
             this.BtnUndeleted.TabIndex = 0;
             this.BtnUndeleted.Text = "Undeleted (1)";
             this.BtnUndeleted.UseVisualStyleBackColor = true;
@@ -131,9 +131,9 @@
             this.BtnCheckedOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCheckedOut.Font = new System.Drawing.Font("Humanst521 BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCheckedOut.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.BtnCheckedOut.Location = new System.Drawing.Point(307, 23);
+            this.BtnCheckedOut.Location = new System.Drawing.Point(305, 23);
             this.BtnCheckedOut.Name = "BtnCheckedOut";
-            this.BtnCheckedOut.Size = new System.Drawing.Size(115, 29);
+            this.BtnCheckedOut.Size = new System.Drawing.Size(113, 27);
             this.BtnCheckedOut.TabIndex = 2;
             this.BtnCheckedOut.Text = "Checked Out (0)";
             this.BtnCheckedOut.UseVisualStyleBackColor = true;
@@ -145,9 +145,9 @@
             this.BtnDeleted.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDeleted.Font = new System.Drawing.Font("Humanst521 BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDeleted.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.BtnDeleted.Location = new System.Drawing.Point(428, 23);
+            this.BtnDeleted.Location = new System.Drawing.Point(424, 23);
             this.BtnDeleted.Name = "BtnDeleted";
-            this.BtnDeleted.Size = new System.Drawing.Size(118, 29);
+            this.BtnDeleted.Size = new System.Drawing.Size(116, 27);
             this.BtnDeleted.TabIndex = 3;
             this.BtnDeleted.Text = "Deleted (1)";
             this.BtnDeleted.UseVisualStyleBackColor = true;
@@ -172,10 +172,10 @@
             this.Column10});
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 6);
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 68);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 65);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(737, 382);
+            this.dataGridView1.Size = new System.Drawing.Size(729, 370);
             this.dataGridView1.TabIndex = 4;
             // 
             // Column1
@@ -239,9 +239,9 @@
             this.BtnMissingOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMissingOwner.Font = new System.Drawing.Font("Humanst521 BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMissingOwner.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.BtnMissingOwner.Location = new System.Drawing.Point(552, 23);
+            this.BtnMissingOwner.Location = new System.Drawing.Point(546, 23);
             this.BtnMissingOwner.Name = "BtnMissingOwner";
-            this.BtnMissingOwner.Size = new System.Drawing.Size(124, 29);
+            this.BtnMissingOwner.Size = new System.Drawing.Size(124, 27);
             this.BtnMissingOwner.TabIndex = 5;
             this.BtnMissingOwner.Text = "Missing Owner (0)";
             this.BtnMissingOwner.UseVisualStyleBackColor = true;
@@ -262,10 +262,10 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(754, 23);
+            this.panel1.Location = new System.Drawing.Point(746, 23);
             this.panel1.Name = "panel1";
             this.tableLayoutPanel1.SetRowSpan(this.panel1, 3);
-            this.panel1.Size = new System.Drawing.Size(261, 427);
+            this.panel1.Size = new System.Drawing.Size(257, 412);
             this.panel1.TabIndex = 6;
             // 
             // txtUpdatedAt
@@ -325,7 +325,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button7.Location = new System.Drawing.Point(77, 402);
+            this.button7.Location = new System.Drawing.Point(77, 387);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(82, 23);
             this.button7.TabIndex = 6;
@@ -340,7 +340,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Humanst521 BT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(0, 403);
+            this.button6.Location = new System.Drawing.Point(0, 388);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 5;
@@ -399,7 +399,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 28);
+            this.label1.Size = new System.Drawing.Size(257, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Filters";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -13,12 +13,13 @@ namespace Aliamero_Document_Repository_Software.DAL
 {
     class DepartmentDAL
     {
-        public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
+        //public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
         //SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
+Connection con = new Connection();
         public bool Insert(DepartmentBLL dbll)
         {
             bool IsSuccess = false;
-            SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "INSERT INTO [dbo].[Department]" +
                                                "([Department]" +
                                                ",[Description])" +
@@ -55,7 +56,7 @@ namespace Aliamero_Document_Repository_Software.DAL
         public DataTable Select()
         {
             DataTable dt = null;
-            SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "SELECT[ID]" +
                           ",[Department]" +
                           ",[Description]" +

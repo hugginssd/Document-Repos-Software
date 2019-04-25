@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_Briefcase.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -62,6 +65,7 @@
     <Compile Include="BLL\UserEmployeeBLL.cs" />
     <Compile Include="BLL\VendorDocumentBLL.cs" />
     <Compile Include="DAL\ClientDocumentDAL.cs" />
+    <Compile Include="DAL\Connection.cs" />
     <Compile Include="DAL\DepartmentDAL.cs" />
     <Compile Include="DAL\DesignationDAL.cs" />
     <Compile Include="DAL\DocumentTypesDAL.cs" />
@@ -259,6 +263,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources - Copy\swift logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_Briefcase.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

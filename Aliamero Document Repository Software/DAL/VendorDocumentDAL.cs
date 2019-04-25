@@ -13,12 +13,13 @@ namespace Aliamero_Document_Repository_Software.DAL
 {
     class VendorDocumentDAL
     {
-        public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
-        SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
+        // public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
+        //SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
+        Connection con = new Connection();
         public bool Insert(VendorDocumentBLL cbll)
         {
             bool IsSuccess = false;
-            //SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "INSERT INTO [dbo].[VendorDocuments]" +
                                                "([VendorName]" +
                                                ",[DocumentType]" +
@@ -72,7 +73,7 @@ namespace Aliamero_Document_Repository_Software.DAL
         public DataTable Select()
         {
             DataTable dt = null;
-            //SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "SELECT [ID]" +
                                   ",[VendorName]" +
                                   ",[DocumentType]" +

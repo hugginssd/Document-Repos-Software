@@ -14,12 +14,13 @@ namespace Aliamero_Document_Repository_Software.DAL
 {
     class EmployeeDAL
     {
-        public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
+        // public string connection = ConfigurationManager.ConnectionStrings["document_connection"].ToString();
         //SqlConnection con = new SqlConnection("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=aliamero;Integrated Security=True;Pooling=False");
+        Connection con = new Connection();
         public bool Insert(UserEmployeeBLL uel)
         {
             bool IsSuccess = false;
-            SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "INSERT INTO [dbo].[Employee]" +
                                        "([EmployeeID]" +
                                        ",[Firstname]" +
@@ -77,7 +78,7 @@ namespace Aliamero_Document_Repository_Software.DAL
         public DataTable Select()
         {
             DataTable dt = null;
-            SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "SELECT [ID]" +
                 ",[EmployeeID] AS [EMPLOYEEID]" +
                 ",[Firstname] AS [FIRSTNAME]" +
@@ -111,7 +112,7 @@ namespace Aliamero_Document_Repository_Software.DAL
         public DataTable Search(string keywords)
         {
             DataTable dt = null;
-            SqlConnection con = new SqlConnection(connection);
+            SqlConnection con = new SqlConnection(this.con.connection);
             string sql = "SELECT [ID]" +
                 ",[EmployeeID] AS [EMPLOYEEID]" +
                 ",[Firstname] AS [FIRSTNAME]" +
